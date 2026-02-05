@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tour rápido — Cómo ubicarse en pantallas de NetSuite</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">NS</div>
+      <div class="titles">
+        <div class="title">Tour rápido</div>
+        <div class="subtitle">Cómo ubicarse en pantallas: búsquedas, informes y formularios</div>
+      </div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="stepLabel">Sección 1/4</span>
+        <div class="meta-actions">
+          <button id="toggleHints" class="btn ghost" type="button" aria-pressed="true">Ocultar números</button>
+          <button id="toggleMode" class="btn ghost" type="button" aria-pressed="true">Modo Tour</button>
+        </div>
+      </div>
+      <div class="progress">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="Navegación">
+      <nav>
+        <ul id="navList" class="nav-list"></ul>
+      </nav>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Tip del día</div>
+        <div id="globalTip" class="sidebar-card-body">
+          Haz clic en un número sobre la imagen para ver la explicación.
+        </div>
+      </div>
+
+      <div class="sidebar-card subtle">
+        <div class="sidebar-card-title">Ojo</div>
+        <div class="sidebar-card-body">
+          En NetSuite no estás “llenando un formulario cualquiera”: tus cambios pueden impactar inventario, cartera o contabilidad.
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="content-head">
+        <h1 id="screenTitle">—</h1>
+        <p id="screenIntro" class="muted">—</p>
+      </div>
+
+      <div class="stage">
+        <div class="canvas">
+          <div class="canvas-inner">
+            <img id="screenImg" class="screen-img" alt="Pantalla de ejemplo" />
+            <div id="pinsLayer" class="pins-layer" aria-label="Marcadores interactivos"></div>
+          </div>
+          <div class="canvas-foot muted">
+            Reemplaza la imagen en <code>/assets</code> (mismo nombre) para usar tus capturas reales.
+          </div>
+        </div>
+
+        <div class="panel" aria-label="Panel de explicación">
+          <div class="panel-head">
+            <div class="panel-kicker">Lo que debes mirar</div>
+            <div id="panelTitle" class="panel-title">—</div>
+          </div>
+
+          <div id="cards" class="cards"></div>
+
+          <div class="quiz">
+            <div class="quiz-head">
+              <div class="quiz-title">Mini reto (20–40s)</div>
+              <button id="showAnswer" class="btn small" type="button">Ver respuesta</button>
+            </div>
+            <div id="quizPrompt" class="quiz-prompt">—</div>
+            <div id="quizAnswer" class="quiz-answer hidden">—</div>
+          </div>
+
+          <div class="panel-actions">
+            <button id="prevBtn" class="btn" type="button">← Anterior</button>
+            <button id="nextBtn" class="btn primary" type="button">Siguiente →</button>
+          </div>
+
+          <div class="panel-foot muted">
+            Mantén cada tarjeta en 1–2 líneas (tipo tooltip). El objetivo es ubicarse, no memorizar.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer muted">
+    Template para GitHub Pages. Edita <code>content.js</code> para textos y pines.
+  </footer>
+
+  <script src="./content.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
